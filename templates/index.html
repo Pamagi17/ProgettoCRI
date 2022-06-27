@@ -13,21 +13,21 @@
   <body>
     <img id="navbar-logo" class="center" src="https://media-exp1.licdn.com/dms/image/C4E0BAQF9kXgbEva7PQ/company-logo_200_200/0/1587940031983?e=2147483647&v=beta&t=7f1fEMUXHvkkNyJicZ47T_ZLfWX5LTcyFZnJIXna9T0" alt="CRI" height="50px" width="50px">
 
-    <form>
+    <form method="POST">
     <div class="mb-3">
         <label for="formGroupExampleInput" class="form-label">Nome</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome" required>
+        <input type="text" class="form-control" name = "nome" id="formGroupExampleInput" placeholder="Nome" required>
       </div>
       
       <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Cognome</label>
-        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Cognome" required>
+        <input type="text" class="form-control" name = "cognome" id="formGroupExampleInput2" placeholder="Cognome" required>
       </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Indirizzo email</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" required>
+        <input type="email" name = "email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" required>
         <div id="emailHelp" class="form-text">Non condivideremo la tua email con nessuno</div>
       </div>
       <div class="mb-3">
