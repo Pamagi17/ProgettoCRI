@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, request, render_template
 
 app = Flask (__name__)
 
@@ -6,7 +6,10 @@ app = Flask (__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/')
-def insert():
-    return 
+@app.route('/', methods=['POST'])
+def my_form_post():
+    nome = request.form['nome']
+    cognome = request.form['cognome']
+    email = request.form['email']
 
+    return email
