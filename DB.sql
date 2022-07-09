@@ -12,3 +12,10 @@ INSERT INTO utenti (nome, cognome, email) VALUES (
     'pippo.franco@gail.com'
 
 );
+
+INSERT INTO utenti (nome, cognome, email) VALUE (
+    'Ciccio',
+    'Graziani',
+    'ciccio.graziani@gmail.com',
+
+);
