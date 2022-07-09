@@ -1,3 +1,8 @@
-.nav-title {
-  color: #cc0100;
+#submit-button {
+  background-color: #cc0100;
+  border-color: #cc0100;
+}
+#informativeBanner {
+  background-color: #f8f9fa;
+  color: #000;
 }
