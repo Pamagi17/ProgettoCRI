@@ -1,8 +1,17 @@
-#submit-button {
-  background-color: #cc0100;
-  border-color: #cc0100;
+img{
+  align-items: center;
 }
-#informativeBanner {
-  background-color: #f8f9fa;
-  color: #000;
+
+div {
+    width: 300px;
+    padding: 10px;
+    margin: auto;
+  }
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 200px;
 }
