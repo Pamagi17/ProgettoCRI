@@ -6,3 +6,11 @@
   background-color: #f8f9fa;
   color: #000;
 }
+#banner {
+  background-color: #0dae08;
+  color: #fff;
+  border-radius: 4px;
+}
+#banner-container {
+  display: none;
+}
