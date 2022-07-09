@@ -1,17 +1,3 @@
-img{
-  align-items: center;
-}
-
-div {
-    width: 300px;
-    padding: 10px;
-    margin: auto;
-  }
-
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 200px;
-  height: 200px;
+.nav-title {
+  color: #cc0100;
 }
