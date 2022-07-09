@@ -1,17 +1,16 @@
-img{
-  align-items: center;
+#submit-button {
+  background-color: #cc0100;
+  border-color: #cc0100;
 }
-
-div {
-    width: 300px;
-    padding: 10px;
-    margin: auto;
-  }
-
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 200px;
-  height: 200px;
+#informativeBanner {
+  background-color: #f8f9fa;
+  color: #000;
+}
+#banner {
+  background-color: #0dae08;
+  color: #fff;
+  border-radius: 4px;
+}
+#banner-container {
+  display: none;
 }
