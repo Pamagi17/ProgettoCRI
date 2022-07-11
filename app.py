@@ -1,24 +1,33 @@
-from flask import Flask, request, render_template
+from crypt import methods
+from flask import Flask, redirect, request, render_template, url_for
+import API.sendEmail as sendEmail
 
 app = Flask (__name__)
+app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
+url = '127.0.0.1:5000'
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index():
-    return render_template('index.html')
+    if request.method == "POST":
 
-@app.route('/', methods=['POST'])
-def my_form_post():
+        firstName = request.form['firstName'].strip()
+        lastName = request.form['lastName'].strip()
+        email = request.form['email'].strip()
 
-    # Prendo i dati inseriti in input dal form
-    nome = request.form['firstName'].strip()
-    cognome = request.form['lastName'].strip()
-    email = request.form['email'].strip()
+        if firstName and lastName and email:
+            if sendEmail.sendEmail(email, firstName):
+                return redirect(url_for('emailSent'))
+            else:
+                print('Unable to sendEmail')
+        else:
+            print('Data are not enriched')
 
-    if nome and cognome and email:
-        print('variabili NON vuote')
-        
+    else: # GET request
+        return render_template('form.html')
 
-    # print(nome, cognome, email) #stampo i dati inseriti per verifica
+@app.route('/emailSent')
+def emailSent():
+    return render_template('emailSent.html')
 
-    # Ritorno alla pagina iniziale dopo aver inserito i dati
-    return render_template('index.html')
+if __name__ == "__main__":
+    app.run(debug=True)

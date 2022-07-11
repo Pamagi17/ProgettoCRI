@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% block head %}{% endblock %}
+
+
+    <!-- My Style -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Croce Rossa Italiana | Attestato CRI</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand mx-auto" href="#">
+                <!-- <img src="https://media-exp1.licdn.com/dms/image/C4E0BAQF9kXgbEva7PQ/company-logo_200_200/0/1587940031983?e=2147483647&v=beta&t=7f1fEMUXHvkkNyJicZ47T_ZLfWX5LTcyFZnJIXna9T0" alt="Logo CRI" width="50" height="50" class="d-inline-block align-text-top"> -->
+                <img src="https://cri.it/wp-content/uploads/2019/10/cropped-Marchio-ROSSO-ORIZZONTALE-RGB-3.png"
+                    alt="Logo Croce Rossa Italiana" height="50" class="d-inline-block align-text-top">
+            </a>
+        </div>
+    </nav>
+
+    <div class="container">
+    {% block content %}{% endblock %}
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- My jQuery -->
+    <script src="{{ url_for('static',filename='script/main.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- Form -->
+<div class="row mt-5">
+    <div class="col-lg-7 col-12">
+        <form action="/" method="POST">
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="inputFirstname" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="inputFirstname" placeholder="Mario..." name="firstName"
+                        required>
+                
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="inputLastname" class="form-label">Cognome</label>
+                    <input type="text" class="form-control" id="inputLastname" placeholder="Rossi..." name="lastName"
+                        required>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="inputEmail" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="mario.rossi@email.com"
+                        name="email" required>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col">
+                    <button type="submit" class="btn btn-primary px-5" id="submit-button">Invia</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-1 d-none d-lg-block"></div>
+    <div class="col-4 d-none d-lg-block p-4" id="informativeBanner">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dolorem minus cumque, quod in
+            explicabo rerum adipisci! Dicta, nihil. Deleniti, at repudiandae tenetur aperiam dignissimos sunt
+            saepe voluptatem fugiat aspernatur.
+            <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, porro beatae ad sed sint
+            dignissimos! Explicabo itaque odit aperiam doloribus voluptatum, voluptas, aliquid necessitatibus,
+            adipisci minima repudiandae nemo sit ea.
+        </p>
+    </div>
+</div>
+
+{% endblock %}
